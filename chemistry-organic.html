@@ -4,10 +4,182 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>有机化学 - 化学资料 - 邻氯苯甲醛的学习笔记</title>
-    <!-- 样式部分与元素化学页面完全相同，为节省篇幅省略 -->
     <style>
-        /* 样式代码与chemistry-elements.html完全相同 */
-        /* 复制上面的完整style标签内容到这里 */
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        nav {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            white-space: nowrap;
+        }
+        .nav-links a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        .hero {
+            text-align: center;
+            padding: 3rem 0;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        .hero h1 {
+            color: #2575fc;
+            margin-bottom: 1rem;
+        }
+        .breadcrumb {
+            background: white;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        .breadcrumb a {
+            color: #2575fc;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .materials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .material-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            padding: 2rem;
+            transition: all 0.3s ease;
+            border-left: 5px solid #2575fc;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .material-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            text-decoration: none;
+            color: inherit;
+        }
+        .material-header {
+            margin-bottom: 1rem;
+        }
+        .material-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #2575fc;
+            margin: 0 0 0.5rem 0;
+        }
+        .material-description {
+            color: #666;
+            margin: 0;
+            line-height: 1.5;
+        }
+        .material-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+            color: #888;
+            font-size: 0.9rem;
+        }
+        .file-info {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .file-icon {
+            font-size: 1.2rem;
+        }
+        .cloud-hint {
+            background: #e3f2fd;
+            padding: 0.5rem 1rem;
+            border-radius: 15px;
+            color: #1976d2;
+            font-size: 0.8rem;
+        }
+        .btn {
+            display: inline-block;
+            background: #2575fc;
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid #2575fc;
+            font-size: 0.9rem;
+        }
+        .btn:hover {
+            background: white;
+            color: #2575fc;
+            transform: scale(1.05);
+        }
+        .btn-outline {
+            background: white;
+            color: #2575fc;
+            border: 2px solid #2575fc;
+            margin-right: 1rem;
+        }
+        .btn-outline:hover {
+            background: #2575fc;
+            color: white;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            background: #333;
+            color: white;
+        }
+        @media (max-width: 768px) {
+            .nav-container { flex-direction: column; gap: 1rem; }
+            .nav-links { flex-wrap: wrap; justify-content: center; }
+            .materials-grid { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
@@ -38,47 +210,65 @@
         </div>
 
         <div class="materials-grid">
-            <div class="material-card" style="opacity: 0.7; cursor: not-allowed;">
+            <a href="https://www.123pan.com/Weboffice/?type=w&id=36539197&FileName=%E6%9C%89%E6%9C%BA%E5%8C%96%E5%AD%A6%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB.docx&Size=943044&Etag=bb58d2fd7197611a69f24883d47868c5&S3KeyFlag=1854255866-0&CreateAt=1764508773&UpdateAt=1764508773&uid=1854255866" 
+               class="material-card" target="_blank">
                 <div class="material-header">
-                    <h3 class="material-title">有机化合物命名规则</h3>
-                    <p class="material-description">系统命名法、常见官能团的命名规则、同分异构体的命名等有机化合物命名方法。</p>
+                    <h3 class="material-title">有机化学基础知识点汇总</h3>
+                    <p class="material-description">囊括高中有机化学所有内容，参考人教版和苏教版教材。包含有机化合物命名、结构、性质、反应机理等全面知识点整理。</p>
                 </div>
                 <div class="material-meta">
                     <div class="file-info">
                         <span class="file-icon">📄</span>
-                        <span>整理中...</span>
+                        <span>Word文档 • 约921KB</span>
                     </div>
-                    <div class="cloud-hint">敬请期待</div>
+                    <div class="cloud-hint">123云盘下载</div>
                 </div>
-            </div>
+            </a>
 
-            <div class="material-card" style="opacity: 0.7; cursor: not-allowed;">
+            <a href="https://www.123pan.com/Weboffice/?type=w&id=36539196&FileName=%E9%AB%98%E4%B8%AD%E5%B8%B8%E8%A7%81%E6%9C%89%E6%9C%BA%E7%89%A9%E7%89%A9%E7%90%86%E6%80%A7%E8%B4%A8%E6%B1%87%E6%80%BB.docx&Size=25426&Etag=9524cc1aeffd552f461b59915a130a53&S3KeyFlag=1854255866-0&CreateAt=1764508772&UpdateAt=1764508772&uid=1854255866" 
+               class="material-card" target="_blank">
                 <div class="material-header">
-                    <h3 class="material-title">有机化学反应机理</h3>
-                    <p class="material-description">取代反应、加成反应、消去反应等有机化学反应机理详解。</p>
+                    <h3 class="material-title">常见有机物物理性质汇总</h3>
+                    <p class="material-description">详细整理高中常见有机物的物理性质，包括密度、沸点、熔点、溶解性等重要物理参数，为实验设计和物质鉴别提供参考。</p>
                 </div>
                 <div class="material-meta">
                     <div class="file-info">
                         <span class="file-icon">📄</span>
-                        <span>整理中...</span>
+                        <span>Word文档 • 约24.8KB</span>
                     </div>
-                    <div class="cloud-hint">敬请期待</div>
+                    <div class="cloud-hint">123云盘下载</div>
                 </div>
-            </div>
+            </a>
 
-            <div class="material-card" style="opacity: 0.7; cursor: not-allowed;">
+            <a href="https://www.123pan.com/Weboffice/?type=w&id=36539195&FileName=%E6%9C%89%E6%9C%BA%E5%8C%96%E5%AD%A6%E5%8F%8D%E5%BA%94%E6%96%B9%E7%A8%8B%E5%BC%8F%E6%B1%87%E6%80%BB.docx&Size=244257&Etag=bff8f39dcc482b71fd7be3b823921d5b&S3KeyFlag=1854255866-0&CreateAt=1764508772&UpdateAt=1764508772&uid=1854255866" 
+               class="material-card" target="_blank">
                 <div class="material-header">
-                    <h3 class="material-title">官能团性质与转化</h3>
-                    <p class="material-description">各类官能团的化学性质、特征反应及相互转化关系总结。</p>
+                    <h3 class="material-title">有机化学反应方程式汇总</h3>
+                    <p class="material-description">系统整理各类有机化学反应方程式，包括取代反应、加成反应、消去反应、氧化还原反应等，配有反应条件和应用说明。</p>
                 </div>
                 <div class="material-meta">
                     <div class="file-info">
                         <span class="file-icon">📄</span>
-                        <span>整理中...</span>
+                        <span>Word文档 • 约238KB</span>
                     </div>
-                    <div class="cloud-hint">敬请期待</div>
+                    <div class="cloud-hint">123云盘下载</div>
                 </div>
-            </div>
+            </a>
+
+            <a href="https://www.123pan.com/Weboffice/?type=w&id=36539194&FileName=%E6%9C%89%E6%9C%BA%E5%8F%8D%E5%BA%94%E6%9D%A1%E4%BB%B6%E6%B1%87%E6%80%BB.docx&Size=106469&Etag=347cade96e34c778596a413d0e2165f8&S3KeyFlag=1854255866-0&CreateAt=1764508772&UpdateAt=1764508772&uid=1854255866" 
+               class="material-card" target="_blank">
+                <div class="material-header">
+                    <h3 class="material-title">有机反应条件汇总</h3>
+                    <p class="material-description">详细整理各类有机化学反应的条件要求，包括温度、催化剂、溶剂等反应条件，帮助理解反应机理和实验设计。</p>
+                </div>
+                <div class="material-meta">
+                    <div class="file-info">
+                        <span class="file-icon">📄</span>
+                        <span>Word文档 • 约104KB</span>
+                    </div>
+                    <div class="cloud-hint">123云盘下载</div>
+                </div>
+            </a>
         </div>
 
         <div style="text-align: center; margin-top: 3rem;">
