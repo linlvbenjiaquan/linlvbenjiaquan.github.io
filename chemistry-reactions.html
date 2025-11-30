@@ -4,10 +4,182 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>反应原理 - 化学资料 - 邻氯苯甲醛的学习笔记</title>
-    <!-- 样式部分与元素化学页面完全相同，为节省篇幅省略 -->
     <style>
-        /* 样式代码与chemistry-elements.html完全相同 */
-        /* 复制上面的完整style标签内容到这里 */
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        nav {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            white-space: nowrap;
+        }
+        .nav-links a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        .hero {
+            text-align: center;
+            padding: 3rem 0;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        .hero h1 {
+            color: #2575fc;
+            margin-bottom: 1rem;
+        }
+        .breadcrumb {
+            background: white;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        .breadcrumb a {
+            color: #2575fc;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .materials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .material-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            padding: 2rem;
+            transition: all 0.3s ease;
+            border-left: 5px solid #2575fc;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .material-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            text-decoration: none;
+            color: inherit;
+        }
+        .material-header {
+            margin-bottom: 1rem;
+        }
+        .material-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #2575fc;
+            margin: 0 0 0.5rem 0;
+        }
+        .material-description {
+            color: #666;
+            margin: 0;
+            line-height: 1.5;
+        }
+        .material-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+            color: #888;
+            font-size: 0.9rem;
+        }
+        .file-info {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .file-icon {
+            font-size: 1.2rem;
+        }
+        .cloud-hint {
+            background: #e3f2fd;
+            padding: 0.5rem 1rem;
+            border-radius: 15px;
+            color: #1976d2;
+            font-size: 0.8rem;
+        }
+        .btn {
+            display: inline-block;
+            background: #2575fc;
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid #2575fc;
+            font-size: 0.9rem;
+        }
+        .btn:hover {
+            background: white;
+            color: #2575fc;
+            transform: scale(1.05);
+        }
+        .btn-outline {
+            background: white;
+            color: #2575fc;
+            border: 2px solid #2575fc;
+            margin-right: 1rem;
+        }
+        .btn-outline:hover {
+            background: #2575fc;
+            color: white;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            background: #333;
+            color: white;
+        }
+        @media (max-width: 768px) {
+            .nav-container { flex-direction: column; gap: 1rem; }
+            .nav-links { flex-wrap: wrap; justify-content: center; }
+            .materials-grid { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
@@ -38,24 +210,40 @@
         </div>
 
         <div class="materials-grid">
-            <div class="material-card" style="opacity: 0.7; cursor: not-allowed;">
+            <a href="https://www.123pan.com/Weboffice/?type=w&id=36539202&FileName=%E9%AB%98%E4%B8%AD%E5%8C%96%E5%AD%A6%E5%B7%A5%E4%B8%9A%E6%B5%81%E7%A8%8B.docx&Size=13717&Etag=d8b594cce962261f34387527ca55feda&S3KeyFlag=1854255866-0&CreateAt=1764508774&UpdateAt=1764508774&uid=1854255866" 
+               class="material-card" target="_blank">
                 <div class="material-header">
-                    <h3 class="material-title">化学动力学基础</h3>
-                    <p class="material-description">反应速率、反应级数、活化能、催化剂等化学动力学基本概念和原理。</p>
+                    <h3 class="material-title">高中化学工业流程</h3>
+                    <p class="material-description">专门整理工业流程题目中的标准表达和"套话"，包括原料预处理、反应条件控制、产品分离提纯等环节的标准描述，帮助规范答题语言。</p>
                 </div>
                 <div class="material-meta">
                     <div class="file-info">
                         <span class="file-icon">📄</span>
-                        <span>整理中...</span>
+                        <span>Word文档 • 约13.4KB</span>
                     </div>
-                    <div class="cloud-hint">敬请期待</div>
+                    <div class="cloud-hint">123云盘下载</div>
                 </div>
-            </div>
+            </a>
+
+            <a href="https://www.123pan.com/Weboffice/?type=w&id=36539200&FileName=%E5%8C%96%E5%AD%A6%E5%8F%8D%E5%BA%94%E5%8E%9F%E7%90%86%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB.docx&Size=149539&Etag=c80c4b313d5d1adb9dd31e8cf1e621ec&S3KeyFlag=1854255866-0&CreateAt=1764508773&UpdateAt=1764508773&uid=1854255866" 
+               class="material-card" target="_blank">
+                <div class="material-header">
+                    <h3 class="material-title">化学反应原理知识点汇总</h3>
+                    <p class="material-description">系统整理化学反应原理的核心知识点，包括化学动力学、化学平衡、电解质溶液、电化学等内容，涵盖所有重要概念和公式。</p>
+                </div>
+                <div class="material-meta">
+                    <div class="file-info">
+                        <span class="file-icon">📄</span>
+                        <span>Word文档 • 约146KB</span>
+                    </div>
+                    <div class="cloud-hint">123云盘下载</div>
+                </div>
+            </a>
 
             <div class="material-card" style="opacity: 0.7; cursor: not-allowed;">
                 <div class="material-header">
-                    <h3 class="material-title">化学平衡原理</h3>
-                    <p class="material-description">化学平衡常数、勒查特列原理、平衡移动规律等化学平衡相关知识。</p>
+                    <h3 class="material-title">化学动力学专题</h3>
+                    <p class="material-description">反应速率、反应级数、活化能、催化剂等化学动力学基本概念和原理的详细解析。</p>
                 </div>
                 <div class="material-meta">
                     <div class="file-info">
