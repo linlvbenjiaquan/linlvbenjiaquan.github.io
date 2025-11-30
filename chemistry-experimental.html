@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实验探究 - 化学资料 - 邻氯苯甲醛的学习笔记</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        nav {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            white-space: nowrap;
+        }
+        .nav-links a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        .hero {
+            text-align: center;
+            padding: 3rem 0;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        .hero h1 {
+            color: #2575fc;
+            margin-bottom: 1rem;
+        }
+        .breadcrumb {
+            background: white;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        .breadcrumb a {
+            color: #2575fc;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .materials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .material-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            padding: 2rem;
+            transition: all 0.3s ease;
+            border-left: 5px solid #2575fc;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .material-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            text-decoration: none;
+            color: inherit;
+        }
+        .material-header {
+            margin-bottom: 1rem;
+        }
+        .material-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #2575fc;
+            margin: 0 0 0.5rem 0;
+        }
+        .material-description {
+            color: #666;
+            margin: 0;
+            line-height: 1.5;
+        }
+        .material-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+            color: #888;
+            font-size: 0.9rem;
+        }
+        .file-info {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .file-icon {
+            font-size: 1.2rem;
+        }
+        .cloud-hint {
+            background: #e3f2fd;
+            padding: 0.5rem 1rem;
+            border-radius: 15px;
+            color: #1976d2;
+            font-size: 0.8rem;
+        }
+        .btn {
+            display: inline-block;
+            background: #2575fc;
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid #2575fc;
+            font-size: 0.9rem;
+        }
+        .btn:hover {
+            background: white;
+            color: #2575fc;
+            transform: scale(1.05);
+        }
+        .btn-outline {
+            background: white;
+            color: #2575fc;
+            border: 2px solid #2575fc;
+            margin-right: 1rem;
+        }
+        .btn-outline:hover {
+            background: #2575fc;
+            color: white;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            background: #333;
+            color: white;
+        }
+        @media (max-width: 768px) {
+            .nav-container { flex-direction: column; gap: 1rem; }
+            .nav-links { flex-wrap: wrap; justify-content: center; }
+            .materials-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">邻氯苯甲醛的学习笔记</a>
+            <div class="nav-links">
+                <a href="index.html">首页</a>
+                <a href="chinese.html">语文</a>
+                <a href="math.html">数学</a>
+                <a href="english.html">英语</a>
+                <a href="physics.html">物理</a>
+                <a href="chemistry.html">化学</a>
+                <a href="biology.html">生物</a>
+                <a href="others.html">其他</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">首页</a> > <a href="chemistry.html">化学资料</a> > <strong>实验探究</strong>
+        </div>
+
+        <div class="hero">
+            <h1>🔬 实验探究</h1>
+            <p>化学实验仪器使用、操作步骤、实验设计和安全注意事项</p>
+        </div>
+
+        <div class="materials-grid">
+            <a href="https://www.123pan.com/Weboffice/?type=w&id=36539198&FileName=%E4%B8%AD%E5%AD%A6%E5%8C%96%E5%AD%A6%E5%B8%B8%E8%A7%81%E4%BB%AA%E5%99%A8%E4%B8%8E%E8%A3%85%E7%BD%AE%E6%95%B4%E7%90%86.docx&Size=505415&Etag=87a54f658a303caf0b6eaa6913688997&S3KeyFlag=1854255866-0&CreateAt=1764508773&UpdateAt=1764508773&uid=1854255866" 
+               class="material-card" target="_blank">
+                <div class="material-header">
+                    <h3 class="material-title">中学化学常见仪器与装置整理</h3>
+                    <p class="material-description">完整整理中学化学实验中使用的各种仪器、装置及其正确使用方法、注意事项。包含烧杯、试管、酒精灯、滴定管等常见仪器的详细说明和图解。</p>
+                </div>
+                <div class="material-meta">
+                    <div class="file-info">
+                        <span class="file-icon">📄</span>
+                        <span>Word文档 • 约500KB</span>
+                    </div>
+                    <div class="cloud-hint">123云盘下载</div>
+                </div>
+            </a>
+
+            <!-- 可以继续添加更多资料卡片 -->
+            <div class="material-card" style="opacity: 0.7; cursor: not-allowed;">
+                <div class="material-header">
+                    <h3 class="material-title">基础实验操作步骤详解</h3>
+                    <p class="material-description">化学基础实验的标准操作流程，包括称量、溶解、过滤、蒸发等基本操作技巧和注意事项。</p>
+                </div>
+                <div class="material-meta">
+                    <div class="file-info">
+                        <span class="file-icon">📄</span>
+                        <span>整理中...</span>
+                    </div>
+                    <div class="cloud-hint">敬请期待</div>
+                </div>
+            </div>
+
+            <div class="material-card" style="opacity: 0.7; cursor: not-allowed;">
+                <div class="material-header">
+                    <h3 class="material-title">实验室安全注意事项</h3>
+                    <p class="material-description">化学实验室安全规范、应急处理措施、常见危险品处理方法等安全知识。</p>
+                </div>
+                <div class="material-meta">
+                    <div class="file-info">
+                        <span class="file-icon">📄</span>
+                        <span>整理中...</span>
+                    </div>
+                    <div class="cloud-hint">敬请期待</div>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="chemistry.html" class="btn btn-outline">返回化学主页</a>
+            <a href="index.html" class="btn">返回首页</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 邻氯苯甲醛的学习笔记 | 由 GitHub Pages 驱动</p>
+    </footer>
+</body>
+</html>
