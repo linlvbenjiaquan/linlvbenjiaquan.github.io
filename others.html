@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>其他 - 邻氯苯甲醛的学习笔记</title>
+    <title>推荐学习网站 - 邻氯苯甲醛的学习笔记</title>
     <style>
         body {
             font-family: 'Microsoft YaHei', sans-serif;
@@ -52,6 +52,33 @@
             margin: 2rem auto;
             padding: 0 2rem;
         }
+        .migration-notice {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            color: white;
+            padding: 1.2rem 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(238, 90, 36, 0.3);
+            margin-bottom: 2rem;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+            animation: pulse 2s infinite;
+        }
+        .migration-notice a {
+            color: #ffd700;
+            text-decoration: none;
+            border-bottom: 2px solid #ffd700;
+            transition: all 0.3s ease;
+        }
+        .migration-notice a:hover {
+            color: white;
+            border-bottom: 2px solid white;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 4px 15px rgba(238, 90, 36, 0.3); }
+            50% { box-shadow: 0 4px 25px rgba(238, 90, 36, 0.5); }
+            100% { box-shadow: 0 4px 15px rgba(238, 90, 36, 0.3); }
+        }
         .hero {
             text-align: center;
             padding: 3rem 0;
@@ -78,13 +105,13 @@
         .breadcrumb a:hover {
             text-decoration: underline;
         }
-        .category-grid {
+        .websites-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
         }
-        .category-card {
+        .website-card {
             background: white;
             padding: 2.5rem;
             border-radius: 15px;
@@ -97,24 +124,40 @@
             color: inherit;
             display: block;
         }
-        .category-card:hover {
+        .website-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 8px 25px rgba(0,0,0,0.15);
             text-decoration: none;
             color: inherit;
+            border-color: #2575fc;
         }
-        .category-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+        .website-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
         }
-        .category-card h3 {
+        .website-card h3 {
             color: #2575fc;
             margin-bottom: 1rem;
-            font-size: 1.5rem;
+            font-size: 1.6rem;
         }
-        .category-card p {
+        .website-card p {
             color: #666;
             margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+        .website-tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+        }
+        .tag {
+            background: #e3f2fd;
+            color: #1976d2;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
         }
         .btn {
             display: inline-block;
@@ -126,67 +169,12 @@
             font-weight: bold;
             transition: all 0.3s ease;
             border: 2px solid #2575fc;
+            margin-top: 1rem;
         }
         .btn:hover {
             background: white;
             color: #2575fc;
             transform: scale(1.05);
-        }
-        .password-modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.5);
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-        .password-content {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-            text-align: center;
-            max-width: 400px;
-            width: 90%;
-        }
-        .password-content h3 {
-            color: #2575fc;
-            margin-bottom: 1rem;
-        }
-        .password-input {
-            width: 100%;
-            padding: 0.8rem;
-            margin: 1rem 0;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            font-size: 1rem;
-            box-sizing: border-box;
-        }
-        .password-input:focus {
-            border-color: #2575fc;
-            outline: none;
-        }
-        .error-message {
-            color: #e74c3c;
-            margin: 0.5rem 0;
-            display: none;
-        }
-        .quotes-content {
-            display: none;
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            margin-top: 2rem;
-        }
-        .quotes-content h2 {
-            color: #2575fc;
-            text-align: center;
-            margin-bottom: 2rem;
         }
         footer {
             text-align: center;
@@ -198,7 +186,8 @@
         @media (max-width: 768px) {
             .nav-container { flex-direction: column; gap: 1rem; }
             .nav-links { flex-wrap: wrap; justify-content: center; }
-            .category-grid { grid-template-columns: 1fr; }
+            .websites-grid { grid-template-columns: 1fr; }
+            .migration-notice { font-size: 1rem; padding: 1rem; }
         }
     </style>
 </head>
@@ -214,55 +203,62 @@
                 <a href="physics.html">物理</a>
                 <a href="chemistry.html">化学</a>
                 <a href="biology.html">生物</a>
-                <a href="others.html">其他</a>
+                <a href="others.html">推荐网站</a>
             </div>
         </div>
     </nav>
 
     <div class="container">
         <div class="breadcrumb">
-            <a href="index.html">首页</a> > <strong>其他</strong>
+            <a href="index.html">首页</a> > <strong>推荐学习网站</strong>
+        </div>
+
+        <!-- 醒目的迁移提示 -->
+        <div class="migration-notice">
+            📢 "语录"内容已经迁往 <a href="https://shishuojinyu.github.io" target="_blank">shishuojinyu.github.io</a>
         </div>
 
         <div class="hero">
-            <h1>🎉 其他内容</h1>
-            <p>这里是一些有趣的内容，包括语录合集和其他整活内容</p>
+            <h1>🌐 推荐学习网站</h1>
+            <p>这里是我精选的一些优质学习工具和网站，希望对你的学习有帮助！</p>
         </div>
 
-        <div class="category-grid">
-            <div class="category-card" onclick="showPasswordModal()">
-                <div class="category-icon">🔒</div>
-                <h3>语录合集</h3>
-                <p>老师与学生的经典语录，需要密码才能查看</p>
-                <div class="btn">查看内容</div>
-            </div>
-
-            <a href="others-more.html" class="category-card">
-                <div class="category-icon">📚</div>
-                <h3>更多内容</h3>
-                <p>其他有趣的整活内容和资源分享</p>
-                <div class="btn">查看内容</div>
+        <div class="websites-grid">
+            <a href="https://www.desmos.com/" class="website-card" target="_blank">
+                <div class="website-icon">📈</div>
+                <h3>Desmos 图形计算器</h3>
+                <p>免费的在线图形计算器，可以绘制函数图像、创建数据表、探索数学变换等。界面简洁，功能强大，适合数学学习和可视化。</p>
+                <div class="website-tags">
+                    <span class="tag">数学工具</span>
+                    <span class="tag">图形计算</span>
+                    <span class="tag">函数可视化</span>
+                    <span class="tag">免费</span>
+                </div>
+                <div class="btn">访问网站</div>
             </a>
-        </div>
 
-        <!-- 语录合集内容区域（默认隐藏） -->
-        <div id="quotesContent" class="quotes-content">
-            <h2>语录合集</h2>
-            <!-- 这里你可以后续添加语录内容 -->
-            <p style="text-align: center; color: #666;">语录内容正在整理中，敬请期待...</p>
-        </div>
-    </div>
+            <a href="https://www.geogebra.org/" class="website-card" target="_blank">
+                <div class="website-icon">📐</div>
+                <h3>GeoGebra 数学平台</h3>
+                <p>动态数学软件，集几何、代数、表格、图形、统计和微积分于一体。提供交互式学习体验，适合从初中到大学各个阶段的数学学习。</p>
+                <div class="website-tags">
+                    <span class="tag">动态数学</span>
+                    <span class="tag">几何工具</span>
+                    <span class="tag">交互学习</span>
+                    <span class="tag">多学科</span>
+                </div>
+                <div class="btn">访问网站</div>
+            </a>
 
-    <!-- 密码输入模态框 -->
-    <div id="passwordModal" class="password-modal">
-        <div class="password-content">
-            <h3>请输入密码</h3>
-            <p>查看语录合集需要密码验证</p>
-            <input type="password" id="passwordInput" class="password-input" placeholder="请输入密码">
-            <div id="errorMessage" class="error-message">密码错误，请重试</div>
-            <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1rem;">
-                <button class="btn" onclick="checkPassword()">确认</button>
-                <button class="btn" style="background: #666; border-color: #666;" onclick="closePasswordModal()">取消</button>
+            <!-- 预留更多网站卡片位置 -->
+            <div class="website-card" style="opacity: 0.7; cursor: not-allowed;">
+                <div class="website-icon">🔬</div>
+                <h3>更多推荐</h3>
+                <p>更多优质学习网站正在整理中，敬请期待...</p>
+                <div class="website-tags">
+                    <span class="tag">即将上线</span>
+                </div>
+                <div class="btn" style="background: #ccc; border-color: #ccc;">敬请期待</div>
             </div>
         </div>
     </div>
@@ -270,55 +266,5 @@
     <footer>
         <p>© 2024 邻氯苯甲醛的学习笔记 | 由 GitHub Pages 驱动</p>
     </footer>
-
-    <script>
-        // 密码验证功能
-        const correctPassword = "20080615";
-        
-        function showPasswordModal() {
-            document.getElementById('passwordModal').style.display = 'flex';
-            document.getElementById('passwordInput').value = '';
-            document.getElementById('errorMessage').style.display = 'none';
-        }
-        
-        function closePasswordModal() {
-            document.getElementById('passwordModal').style.display = 'none';
-        }
-        
-        function checkPassword() {
-            const inputPassword = document.getElementById('passwordInput').value;
-            const errorMessage = document.getElementById('errorMessage');
-            
-            if (inputPassword === correctPassword) {
-                // 密码正确，显示语录内容
-                document.getElementById('passwordModal').style.display = 'none';
-                document.getElementById('quotesContent').style.display = 'block';
-                
-                // 滚动到语录内容区域
-                document.getElementById('quotesContent').scrollIntoView({ 
-                    behavior: 'smooth' 
-                });
-            } else {
-                // 密码错误，显示错误信息
-                errorMessage.style.display = 'block';
-                document.getElementById('passwordInput').value = '';
-                document.getElementById('passwordInput').focus();
-            }
-        }
-        
-        // 按回车键也可以确认密码
-        document.getElementById('passwordInput').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                checkPassword();
-            }
-        });
-        
-        // 点击模态框外部关闭
-        document.getElementById('passwordModal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closePasswordModal();
-            }
-        });
-    </script>
 </body>
 </html>
